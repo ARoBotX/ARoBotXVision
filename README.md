@@ -1,6 +1,6 @@
-# Arobotxvision Project
+# ARoBotXVision Project
 
-This project aims to provide a computer vision solution for Arobot using Python. It utilizes a Makefile to automate the setup and execution process.
+This project aims to provide a computer vision solution part of the ARoBotX using Python. It utilizes a Makefile to automate the setup and execution process.
 
 ## Prerequisites
 
