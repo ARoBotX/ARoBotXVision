@@ -1,0 +1,23 @@
+PYTHON = C:\Python39\python.exe
+PIP = $(PYTHON) -m pip
+
+venv:
+    $(PYTHON) -m venv arobotxvision_env
+
+activate:
+    .\arobotxvision_env\Scripts\activate
+
+install_torch_with_cuda:
+    $(PIP) install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+
+install_other_dependencies:
+    $(PIP) install pykinect2
+    $(PIP) install ultralytics
+    $(PIP) install opencv-python
+
+run:
+    $(PYTHON) src/main.py
+
+.PHONY: venv activate install_torch_with_cuda install_other_dependencies run all
+
+all: venv activate install_torch_with_cuda install_other_dependencies run
