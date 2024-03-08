@@ -1,4 +1,4 @@
-# ARoBotXVision Project
+# ARoBotXVision
 
 This project aims to provide a computer vision solution part of the ARoBotX using Python. It utilizes a Makefile to automate the setup and execution process.
 
