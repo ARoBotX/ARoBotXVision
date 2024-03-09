@@ -6,11 +6,6 @@ from pykinect2 import PyKinectRuntime
 import numpy as np
 import time
 import tensorflow as tf
-from eip import PLC
-#Uncoment next 2 lines for PLC support
-# I am pushing data to a PLC running CLX 5000 software
-#test = PLC()
-#test.IPAddress = "172.16.2.161"
 
 
 config = tf.ConfigProto(log_device_placement=True)
