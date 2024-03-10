@@ -101,12 +101,18 @@ def main():
                                 mask = cv2.resize(mask, (W, H)).astype(np.uint8)
                                 
                                 depth_frame_with_mask = cv2.bitwise_and(depth_frame, depth_frame, mask=mask)
+                                my_path = 'D:/tricalseventhsem/ARoBotXVision/src/outputs'
+                                cv2.imwrite(os.path.join(my_path, 'depth_with_mask.jpg'), depth_frame_with_mask)
+                                cv2.imwrite(os.path.join(my_path, 'depth_frame.jpg'), depth_frame)
+                                cv2.imwrite(os.path.join(my_path, 'color_frame.jpg'), color_frame_RGB)
+                                cv2.imwrite(os.path.join(my_path, 'mask.jpg'), mask)
                                 distance_to_object = np.mean(depth_frame_with_mask)
-                                # my_path = 'D:/tricalseventhsem/ARoBotXVision/src/outputs'
-                                # cv2.imwrite(os.path.join(my_path, 'depth_with_mask.jpg'), depth_frame_with_mask)
-                                # cv2.imwrite(os.path.join(my_path, 'depth_frame.jpg'), depth_frame_with_mask)
-                                # cv2.imwrite(os.path.join(my_path, 'color_frame.jpg'), color_frame_RGB)
-                                # cv2.imwrite(os.path.join(my_path, 'mask.jpg'), mask)
+                                print(distance_to_object)
+                                
+                                # cv2.imwrite(os.path.join('D:/tricalseventhsem/ARoBotXVision/src/outputs', 'depth_with_mask.jpg'), depth_frame_with_mask)
+                                # cv2.imwrite(os.path.join('D:\tricalseventhsem\ARoBotXVision\src\outputs', 'depth_frame.jpg'), depth_frame_with_mask)
+                                # cv2.imwrite(os.path.join('D:\tricalseventhsem\ARoBotXVision\src\outputs', 'color_frame.jpg'), color_frame_RGB)
+                                # cv2.imwrite(os.path.join('D:\tricalseventhsem\ARoBotXVision\src\outputs', 'mask.jpg'), mask)
                                 # cv2.imshow('Depth Frame with Mask', depth_frame_with_mask)
 
             
