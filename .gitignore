@@ -1,1 +1,4 @@
 arobotxvision_env
+src/outputs
+runs
+*.cs
